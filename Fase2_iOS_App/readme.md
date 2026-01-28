@@ -6,48 +6,65 @@ Esta carpeta contiene el código fuente de la aplicación móvil desarrollada en
 La aplicación utiliza un patrón híbrido para combinar la interfaz moderna de Apple con la potencia de OpenCV:
 
 - **Interfaz de Usuario (SwiftUI)**:
-  - `ContentView.swift`: Maneja la selección de imágenes (Cámara/Galería) y muestra los resultados.
+  - `ContentView.swift`: Proporciona un **Canvas de dibujo** donde el usuario traza la figura y muestra el resultado de la clasificación en tiempo real.
   - `ShapeRecognizerApp.swift`: Punto de entrada de la aplicación.
   
 - **Capa Intermedia (Objective-C++)**:
-  - `OpenCVWrapper.h/mm`: Actúa como puente (Bridging Header) entre el código Swift y el motor C++. Convierte los objetos `UIImage` de Apple a matrices `cv::Mat` de OpenCV.
+  - `OpenCVWrapper.h/mm`: Actúa como puente entre Swift y C++. Implementa la lógica nativa de visión computacional.
 
-- **Motor de Visión (C++ Standard)**:
-  - Implementación directa dentro del wrapper (por simplicidad) que replica el algoritmo `Shape Signature` validado en la Fase 1:
-    1. Binarización y extracción de contornos.
-    2. Muestreo del contorno a N puntos equidistantes.
-    3. Cálculo de la transformada de Fourier (FFT) del contorno (Coordenadas complejas).
-    4. Comparación de descriptores con el modelo JSON cargado.
+- **Motor de Visión (C++)**:
+  - Implementación del algoritmo **Shape Signature** con coordenadas complejas:
+    1. **Preprocessing**: Binarización y corrección morfológica del trazo (negro sobre blanco o viceversa).
+    2. **Contorno**: Extracción y remuestreo a 64 puntos equidistantes.
+    3. **DFT**: Cálculo de la Transformada Discreta de Fourier usando `cv::dft` de OpenCV.
+    4. **Clasificación**: Algoritmo k-NN (k=5) utilizando distancia Euclidiana contra el corpus cargado.
 
 ## 2. Configuración del Proyecto
 
 ### Requisitos
 - **Xcode 14.0+**
 - **iOS 15.0+**
-- **OpenCV Framework (iOS Pack)**: Debe estar presente en `ShapeRecognizer/opencv2.framework`. (No incluido en el repo por peso).
+- **OpenCV Framework (iOS Pack)**: Debe estar presente en `ShapeRecognizer/opencv2.framework`.
 
 ### Instalación de OpenCV
-1. Descarga el framework desde [opencv.org](https://opencv.org/releases/).
-2. Coloca la carpeta `opencv2.framework` dentro de `Fase2_iOS_App/ShapeRecognizer/`.
-3. Asegúrate de que en los ajustes del proyecto ("Build Phases" -> "Link Binary With Libraries") aparezca enlazado.
+1. Descargar el framework iOS desde [opencv.org](https://opencv.org/releases/).
+2. Colocar `opencv2.framework` en `Fase2_iOS_App/ShapeRecognizer/`.
+3. Verificar en Xcode: "Build Phases" -> "Link Binary With Libraries".
 
 ## 3. Modelo de Datos
-La app no realiza entrenamiento "on-device". En su lugar, carga al iniciar el archivo:
-- `ios_training_data_corrected.json`
-
-Este archivo contiene los vectores de características pre-calculados en la Fase 1. La clasificación se realiza calculando la **Distancia Euclidiana** entre la firma de la nueva imagen y los vectores promedios del JSON.
+La app carga al iniciar el archivo `ios_training_data_corrected.json` que contiene los vectores característicos (Fourier Descriptors) generados en la Fase 1.
 
 ## 4. Estructura de Archivos
 ```
 ShapeRecognizer/
-├── OpenCVWrapper.mm       # Lógica principal de Visión (C++)
-├── OpenCVWrapper.h        # Cabecera pública para Swift
-├── ShapeRecognizer-Bridging-Header.h
-├── ContentView.swift      # UI principal
-├── ios_training_data_corrected.json  # Modelo
-└── Assets.xcassets/       # Iconos y recursos
+├── OpenCVWrapper.mm       # Lógica C++ (cv::dft, k-NN)
+├── ContentView.swift      # Canvas de dibujo
+├── ios_training_data_corrected.json  # Corpus
+└── ...
 ```
 
-## 5. Solución de Problemas Comunes
-- **"opencv2/opencv.hpp not found"**: Verifica que el framework esté en la ruta correcta y que en "Framework Search Paths" en Xcode esté configurado `$(PROJECT_DIR)/ShapeRecognizer`.
-- **Errores de Linker**: Asegúrate de importar los frameworks del sistema necesarios: `libc++.tbd`, `AVFoundation`, `CoreMedia`.
+## 5. Procedimiento de Prueba y Validación (Manual)
+
+Para cumplir con el requerimiento de validar la precisión del sistema ("Determinar el nivel de precisión... al menos 30 imágenes"), siga estos pasos:
+
+1. **Ejecutar la App** en un Simulador o Dispositivo real (iPhone/iPad).
+2. **Dibujar** una figura geométrica en el área blanca.
+3. Presionar **"Clasificar"**.
+4. Registrar el resultado ("Acierto" o "Fallo") en una hoja de cálculo.
+5. Presionar **"Limpiar"** y repetir.
+
+### Protocolo de Prueba Experimental
+Se debe realizar una prueba con **30 iteraciones** (10 triángulos, 10 círculos, 10 cuadrados) distribuidas de la siguiente forma:
+
+| Iteración | Figura Dibujada | Predicción App | ¿Correcto? |
+|-----------|-----------------|----------------|------------|
+| 1         | Triángulo       | Triángulo      | ✅         |
+| 2         | Círculo         | Círculo        | ✅         |
+| 3         | Cuadrado        | Triángulo      | ❌         |
+| ...       | ...             | ...            | ...        |
+| 30        | ...             | ...            | ...        |
+
+**Cálculo de Precisión:**
+$$ \text{Precisión} = \frac{\text{Total Aciertos}}{30} \times 100\% $$
+
+La **Matriz de Confusión** resultante debe incluirse en el reporte final, indicando qué figuras se confunden con mayor frecuencia (ej. Cuadrados redondeados confundidos con Círculos).

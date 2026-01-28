@@ -297,17 +297,31 @@ static std::vector<double> normalizationFactors;
 }
 
 + (std::vector<std::complex<double>>)computeDFT:(std::vector<std::complex<double>>)signal {
+    if (signal.empty()) return {};
+
+    // 1. Convertir vector<complex> a cv::Mat (2 canales: Real, Imag)
     int N = (int)signal.size();
-    std::vector<std::complex<double>> result(N);
-    for (int k = 0; k < N; k++) {
-        std::complex<double> sum(0, 0);
-        for (int n = 0; n < N; n++) {
-            double angle = -2.0 * M_PI * k * n / N;
-            std::complex<double> twiddle(cos(angle), sin(angle));
-            sum += signal[n] * twiddle;
-        }
-        result[k] = sum;
+    cv::Mat inputMat(N, 1, CV_64FC2); // Double precision, 2 canales
+
+    for(int i = 0; i < N; i++) {
+        inputMat.at<cv::Vec2d>(i, 0)[0] = signal[i].real();
+        inputMat.at<cv::Vec2d>(i, 0)[1] = signal[i].imag();
     }
+
+    // 2. Aplicar DFT de OpenCV
+    // cv::DFT_COMPLEX_OUTPUT ya viene implícito al usar input complejo, pero lo especificamos
+    cv::Mat outputMat;
+    cv::dft(inputMat, outputMat, cv::DFT_COMPLEX_OUTPUT);
+
+    // 3. Convertir resultado cv::Mat de vuelta a vector<complex>
+    std::vector<std::complex<double>> result;
+    result.reserve(N);
+    
+    for(int i = 0; i < outputMat.rows; i++) {
+        cv::Vec2d val = outputMat.at<cv::Vec2d>(i, 0);
+        result.push_back(std::complex<double>(val[0], val[1]));
+    }
+    
     return result;
 }
 
