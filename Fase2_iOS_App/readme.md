@@ -51,14 +51,14 @@ Se realizó una prueba manual exhaustiva utilizando el simulador de iOS (iPhone 
 
 | Clase Real \ Predicción | Triángulo | Círculo | Cuadrado | **Total Muestras** |
 | :--- | :---: | :---: | :---: | :---: |
-| **Triángulo** | **10** | 0 | 0 | 10 |
+| **Triángulo** | **8** | 0 | 0 | 10 |
 | **Círculo** | 0 | **10** | 0 | 10 |
 | **Cuadrado** | 0 | 1 | **9** | 10 |
 
 ### Análisis de Desempeño
 
-*   **Precisión Global**: **96.67%** (29/30 aciertos).
-*   **Triángulos y Círculos**: El sistema mostró una robustez perfecta (100%) en estas categorías, discriminando correctamente incluso triángulos isósceles y escalenos.
+*   **Precisión Global**: **92%%** (27/30 aciertos).
+*   **Círculos**: El sistema mostró una robustez perfecta (100%) en esta categorías.
 *   **Cuadrados**: Se detectó 1 error de clasificación.
 
 ### Análisis de Errores (Casos de Confusión)
@@ -66,6 +66,5 @@ Se realizó una prueba manual exhaustiva utilizando el simulador de iOS (iPhone 
 El único fallo registrado ocurrió al dibujar un cuadrado con **esquinas excesivamente redondeadas** y trazos rápidos.
 
 - **Causa**: Al suavizar las esquinas, la firma de la forma (fft) pierde los componentes de alta frecuencia que distinguen los ángulos rectos, haciendo que el descriptor se asemeje más al de un círculo (cuyo primer armónico domina la señal).
-- **Solución Propuesta**: Aumentar ligeramente el peso de los armónicos superiores en la distancia Euclidiana o mejorar el preprocesamiento para "detectar vértices" antes de la FFT.
 
 > **Conclusión**: La implementación nativa en C++ con descriptores de Fourier complejos demostró ser altamente efectiva para reconocimiento en tiempo real en dispositivos móviles.
