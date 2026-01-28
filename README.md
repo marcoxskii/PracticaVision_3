@@ -1,5 +1,10 @@
 # PracticaVision_3
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![C++](https://img.shields.io/badge/C%2B%2B-17-00599C)
+![iOS](https://img.shields.io/badge/iOS-15.0%2B-black)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-5C3EE8)
+
 Este proyecto implementa un sistema de reconocimiento de formas geométricas (Círculos, Cuadrados, Triángulos) dividido en dos fases: procesamiento y generación de modelo en Python, e implementación de una aplicación iOS que utiliza OpenCV para la clasificación en tiempo real.
 
 ## Estructura del Proyecto
