@@ -87,6 +87,23 @@ Para ejecutar la app en tu dispositivo, necesitas configurar tu equipo de desarr
 - Asegúrate de que las imágenes de entrenamiento en Fase 1 estén correctamente organizadas en sus carpetas respectivas (`circle`, `square`, `triangle`).
 - El archivo `.gitignore` está configurado para evitar subir archivos temporales, binarios de compilación y el framework de OpenCV.
 
+## Resultados de Experimentación (Fase 1)
+
+El siguiente cuadro resume la precisión (accuracy) obtenida por los diferentes métodos de extracción de características evaluados en el cuaderno de Jupyter, probados bajo distintas condiciones de ruido y rotación.
+
+| Método / Condición | Original | Ruido Gaussiano | Ruido S&P | Rotación (Giro) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Momentos de Hu** | 43.06% | 27.78% | 38.89% | 36.11% |
+| **Momentos de Zernike** | **94.44%** | **93.06%** | **91.67%** | **88.89%** |
+| **Shape Signature (App)** | 81.94% | 40.28% | 62.50% | 59.72% |
+
+> **Nota:** Aunque los Momentos de Zernike obtuvieron el mejor rendimiento general, para la implementación móvil se optó por una variación de **Shape Signature** debido a su eficiencia computacional y facilidad de implementación en C++ con OpenCV.
+
+## Informe del Proyecto
+
+Puedes consultar el informe completo en formato PDF con todos los detalles teóricos y experimentales aquí:
+[📄 Ver Informe Completo (PDF)](Informe.pdf)
+
 ## Capturas de Pantalla
 
 A continuación se muestran ejemplos de la aplicación clasificando correctamente las diferentes formas geométricas:
