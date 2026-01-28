@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		011A60132F2684C0001A5435 /* ios_training_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 011A60122F2684C0001A5435 /* ios_training_data.json */; };
+		011A60172F2685BB001A5435 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011A60162F2685BB001A5435 /* opencv2.framework */; };
+		011A601C2F2686F8001A5435 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 011A601B2F2686F8001A5435 /* OpenCVWrapper.mm */; };
+		013299E32F26BAC3001B9D0A /* ios_training_data_corrected.json in Resources */ = {isa = PBXBuildFile; fileRef = 013299E22F26BAC3001B9D0A /* ios_training_data_corrected.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		011A5FF42F26835A001A5435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 011A5FDE2F268358001A5435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 011A5FE52F268358001A5435;
+			remoteInfo = ShapeRecognizer;
+		};
+		011A5FFE2F26835A001A5435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 011A5FDE2F268358001A5435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 011A5FE52F268358001A5435;
+			remoteInfo = ShapeRecognizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011A5FE62F268358001A5435 /* ShapeRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		011A5FF32F26835A001A5435 /* ShapeRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		011A5FFD2F26835A001A5435 /* ShapeRecognizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeRecognizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		011A60122F2684C0001A5435 /* ios_training_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ios_training_data.json; sourceTree = "<group>"; };
+		011A60162F2685BB001A5435 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		011A60192F2686F8001A5435 /* ShapeRecognizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapeRecognizer-Bridging-Header.h"; sourceTree = "<group>"; };
+		011A601A2F2686F8001A5435 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		011A601B2F2686F8001A5435 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		013299E22F26BAC3001B9D0A /* ios_training_data_corrected.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ios_training_data_corrected.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		011A5FE82F268358001A5435 /* ShapeRecognizer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShapeRecognizer;
+			sourceTree = "<group>";
+		};
+		011A5FF62F26835A001A5435 /* ShapeRecognizerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShapeRecognizerTests;
+			sourceTree = "<group>";
+		};
+		011A60002F26835A001A5435 /* ShapeRecognizerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShapeRecognizerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		011A5FE32F268358001A5435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011A60172F2685BB001A5435 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011A5FF02F26835A001A5435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011A5FFA2F26835A001A5435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		011A5FDD2F268358001A5435 = {
+			isa = PBXGroup;
+			children = (
+				011A601A2F2686F8001A5435 /* OpenCVWrapper.h */,
+				011A601B2F2686F8001A5435 /* OpenCVWrapper.mm */,
+				011A5FE82F268358001A5435 /* ShapeRecognizer */,
+				011A5FF62F26835A001A5435 /* ShapeRecognizerTests */,
+				011A60002F26835A001A5435 /* ShapeRecognizerUITests */,
+				011A5FE72F268358001A5435 /* Products */,
+				011A60122F2684C0001A5435 /* ios_training_data.json */,
+				011A60162F2685BB001A5435 /* opencv2.framework */,
+				011A60192F2686F8001A5435 /* ShapeRecognizer-Bridging-Header.h */,
+				013299E22F26BAC3001B9D0A /* ios_training_data_corrected.json */,
+			);
+			sourceTree = "<group>";
+		};
+		011A5FE72F268358001A5435 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				011A5FE62F268358001A5435 /* ShapeRecognizer.app */,
+				011A5FF32F26835A001A5435 /* ShapeRecognizerTests.xctest */,
+				011A5FFD2F26835A001A5435 /* ShapeRecognizerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		011A5FE52F268358001A5435 /* ShapeRecognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011A60072F26835A001A5435 /* Build configuration list for PBXNativeTarget "ShapeRecognizer" */;
+			buildPhases = (
+				011A5FE22F268358001A5435 /* Sources */,
+				011A5FE32F268358001A5435 /* Frameworks */,
+				011A5FE42F268358001A5435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				011A5FE82F268358001A5435 /* ShapeRecognizer */,
+			);
+			name = ShapeRecognizer;
+			packageProductDependencies = (
+			);
+			productName = ShapeRecognizer;
+			productReference = 011A5FE62F268358001A5435 /* ShapeRecognizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		011A5FF22F26835A001A5435 /* ShapeRecognizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011A600A2F26835A001A5435 /* Build configuration list for PBXNativeTarget "ShapeRecognizerTests" */;
+			buildPhases = (
+				011A5FEF2F26835A001A5435 /* Sources */,
+				011A5FF02F26835A001A5435 /* Frameworks */,
+				011A5FF12F26835A001A5435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				011A5FF52F26835A001A5435 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				011A5FF62F26835A001A5435 /* ShapeRecognizerTests */,
+			);
+			name = ShapeRecognizerTests;
+			packageProductDependencies = (
+			);
+			productName = ShapeRecognizerTests;
+			productReference = 011A5FF32F26835A001A5435 /* ShapeRecognizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		011A5FFC2F26835A001A5435 /* ShapeRecognizerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011A600D2F26835A001A5435 /* Build configuration list for PBXNativeTarget "ShapeRecognizerUITests" */;
+			buildPhases = (
+				011A5FF92F26835A001A5435 /* Sources */,
+				011A5FFA2F26835A001A5435 /* Frameworks */,
+				011A5FFB2F26835A001A5435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				011A5FFF2F26835A001A5435 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				011A60002F26835A001A5435 /* ShapeRecognizerUITests */,
+			);
+			name = ShapeRecognizerUITests;
+			packageProductDependencies = (
+			);
+			productName = ShapeRecognizerUITests;
+			productReference = 011A5FFD2F26835A001A5435 /* ShapeRecognizerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		011A5FDE2F268358001A5435 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					011A5FE52F268358001A5435 = {
+						CreatedOnToolsVersion = 26.2;
+						LastSwiftMigration = 2620;
+					};
+					011A5FF22F26835A001A5435 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 011A5FE52F268358001A5435;
+					};
+					011A5FFC2F26835A001A5435 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 011A5FE52F268358001A5435;
+					};
+				};
+			};
+			buildConfigurationList = 011A5FE12F268358001A5435 /* Build configuration list for PBXProject "ShapeRecognizer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 011A5FDD2F268358001A5435;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 011A5FE72F268358001A5435 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				011A5FE52F268358001A5435 /* ShapeRecognizer */,
+				011A5FF22F26835A001A5435 /* ShapeRecognizerTests */,
+				011A5FFC2F26835A001A5435 /* ShapeRecognizerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		011A5FE42F268358001A5435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				013299E32F26BAC3001B9D0A /* ios_training_data_corrected.json in Resources */,
+				011A60132F2684C0001A5435 /* ios_training_data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011A5FF12F26835A001A5435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011A5FFB2F26835A001A5435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		011A5FE22F268358001A5435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011A601C2F2686F8001A5435 /* OpenCVWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011A5FEF2F26835A001A5435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011A5FF92F26835A001A5435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		011A5FF52F26835A001A5435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 011A5FE52F268358001A5435 /* ShapeRecognizer */;
+			targetProxy = 011A5FF42F26835A001A5435 /* PBXContainerItemProxy */;
+		};
+		011A5FFF2F26835A001A5435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 011A5FE52F268358001A5435 /* ShapeRecognizer */;
+			targetProxy = 011A5FFE2F26835A001A5435 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		011A60052F26835A001A5435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		011A60062F26835A001A5435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		011A60082F26835A001A5435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mkt.ShapeRecognizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShapeRecognizer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		011A60092F26835A001A5435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mkt.ShapeRecognizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShapeRecognizer-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		011A600B2F26835A001A5435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mkt.ShapeRecognizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShapeRecognizer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShapeRecognizer";
+			};
+			name = Debug;
+		};
+		011A600C2F26835A001A5435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mkt.ShapeRecognizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShapeRecognizer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShapeRecognizer";
+			};
+			name = Release;
+		};
+		011A600E2F26835A001A5435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mkt.ShapeRecognizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShapeRecognizer;
+			};
+			name = Debug;
+		};
+		011A600F2F26835A001A5435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVXSMM32U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mkt.ShapeRecognizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShapeRecognizer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		011A5FE12F268358001A5435 /* Build configuration list for PBXProject "ShapeRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011A60052F26835A001A5435 /* Debug */,
+				011A60062F26835A001A5435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		011A60072F26835A001A5435 /* Build configuration list for PBXNativeTarget "ShapeRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011A60082F26835A001A5435 /* Debug */,
+				011A60092F26835A001A5435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		011A600A2F26835A001A5435 /* Build configuration list for PBXNativeTarget "ShapeRecognizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011A600B2F26835A001A5435 /* Debug */,
+				011A600C2F26835A001A5435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		011A600D2F26835A001A5435 /* Build configuration list for PBXNativeTarget "ShapeRecognizerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				011A600E2F26835A001A5435 /* Debug */,
+				011A600F2F26835A001A5435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 011A5FDE2F268358001A5435 /* Project object */;
+}
