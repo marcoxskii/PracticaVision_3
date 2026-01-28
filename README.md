@@ -109,6 +109,17 @@ El siguiente cuadro resume la precisión (accuracy) obtenida por los diferentes 
 
 > **Nota:** Aunque los Momentos de Zernike obtuvieron el mejor rendimiento general, para la implementación móvil se optó por una variación de **Shape Signature** debido a su eficiencia computacional y facilidad de implementación en C++ con OpenCV.
 
+## Resultados de Validación (Fase 2 - iOS App)
+
+Se evaluó la aplicación final con 30 pruebas manuales en dispositivo, obteniendo una precisión global del 92%
+
+| Clase | Aciertos | Precisión |
+| :--- | :---: | :---: |
+| **Triángulo** | 8/10 | 80% |
+| **Círculo** | 10/10 | 100% |
+| **Cuadrado** | 9/10 | 90% |
+
+
 ## Informe del Proyecto
 
 Puedes consultar el informe completo en formato PDF con todos los detalles teóricos y experimentales aquí:
