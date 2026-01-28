@@ -9,6 +9,11 @@ El repositorio se organiza en dos carpetas principales:
 - **`Fase1_Procesamiento/`**: Entorno de investigación y desarrollo. Contiene notebooks de Jupyter para el preprocesamiento de imágenes, extracción de características y generación del archivo de entrenamiento.
 - **`Fase2_iOS_App/`**: Aplicación nativa de iOS desarrollada en SwiftUI que integra C++ y OpenCV para consumir el modelo generado y clasificar formas.
 
+## Dataset Utilizado
+
+Para el entrenamiento y validación de los modelos se utilizó el [UPS Writing Skills Dataset](https://www.kaggle.com/datasets/adolfogavilanes/ups-writing-skills/data), disponible públicamente en Kaggle.
+Este dataset contiene muestras de formas geométricas (círculos, cuadrados y triángulos) dibujadas a mano, capturadas para el análisis de habilidades de motricidad fina en niños.
+
 ---
 
 ## Requisitos Previos
